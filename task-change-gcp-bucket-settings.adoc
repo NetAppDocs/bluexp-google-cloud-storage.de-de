@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: task-change-gcp-bucket-settings.html 
+keywords: google cloud storage buckets, google cloud storage, edit buckets, change buckets 
+summary: Sobald Ihre Arbeitsumgebung in Google Cloud Storage auf dem Canvas verfügbar ist, können Sie einige Bucket-Eigenschaften direkt aus BlueXP ändern. 
+---
+= Ändern der Bucket-Einstellungen für Google Cloud Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sobald Ihre Arbeitsumgebung in Google Cloud Storage auf dem Canvas verfügbar ist, können Sie einige Bucket-Eigenschaften direkt aus BlueXP ändern.
+
+Beachten Sie, dass Sie den Bucket-Namen, das Google-Projekt oder die Schutzeinstellungen nicht ändern können.
+
+Zu den Bucket-Eigenschaften, die Sie ändern können, gehören:
+
+* Storage-Klasse für alle zukünftigen Objekte im Bucket
+* Sie können den Objekten im Bucket Beschriftungen hinzufügen, bearbeiten und entfernen.
+* Turbo-Replikationsmodus – nur, wenn sich der Bucket in einem Dual-Region-Standort befindet.
+
+
+Sie können diese Bucket-Einstellungen direkt in BlueXP ändern, indem Sie auf klicken image:button-horizontal-more.gif["Die Schaltfläche „drei Punkte mehr“"] > *Eimer-Details bearbeiten* für einen Eimer.
+
+image:screenshot-edit-gcp-bucket.png["Ein Screenshot, der zeigt, wie die Schaltfläche „Bucket-Details bearbeiten“ ausgewählt wird, um Bucket-Eigenschaften zu bearbeiten."]
+
+
+
+== Ändern Sie die Storage-Klasse
+
+Im Abschnitt Storage-Klasse können Sie nur bestimmte Änderungen vornehmen:
+
+* Wenn _Autoclass_ bei der Erstellung des Buckets ausgewählt wurde, können Sie Autoclass deaktivieren und eine andere Speicherklasse auswählen.
+* Wenn bei der Erstellung des Buckets eine andere Storage-Klasse ausgewählt wurde, können Sie zu jeder anderen Storage-Klasse wechseln - außer _Autoclass_.
+
+
+Objekte, die in einer anderen Klasse waren, bleiben in dieser Klasse, aber alle neuen Objekte verwenden die neue Klasseneinstellung.
+
+
+
+== Beschriftungen für Objekte im Bucket hinzufügen oder ändern
+
+Etiketten sind Metadaten, mit denen Sie Ressourcen gruppieren können, um Applikationen, Umgebungen, Regionen, Cloud-Provider und vieles mehr zu identifizieren. Labels bestehen aus einem Schlüssel und einem Wert. Sie können einem Bucket Beschriftungen hinzufügen, sodass die Beschriftungen auf Objekte angewendet werden, wenn sie dem Bucket hinzugefügt werden. Sie können auch Beschriftungen und Beschriftungswerte ändern und löschen.
+
+Nachdem Sie ein Label hinzugefügt oder bearbeitet haben, klicken Sie auf *Übernehmen*, um Ihre Änderungen zu speichern. Wenn Sie weitere Etiketten hinzufügen möchten, klicken Sie auf *Neues Label hinzufügen*. Sie können bis zu 10 Etiketten pro Eimer hinzufügen.
+
+
+
+== Ändern Sie, ob die Turbo-Replikation an Standorten mit zwei Regionen aktiviert ist
+
+Wenn sich der Bucket an einem Standort mit zwei Regionen befindet, können Sie aktivieren oder deaktivieren, ob der Turbo-Replikationsmodus aktiviert oder deaktiviert ist. Mit „Turbo-Replikation“ können Sie die Geo-Redundanz für alle neu geschriebenen Objekte innerhalb eines Ziels von 15 Minuten garantieren.
+
+Nach dem Erstellen des Buckets können keine weiteren Standortdetails geändert werden.

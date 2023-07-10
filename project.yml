@@ -1,0 +1,67 @@
+---
+settings:
+  name: Google Cloud Storage
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: de-de,us-en,ja-jp,ko-kr,zh-cn,zh-tw,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: Google Cloud Storage-Dokumentation
+    url: "/index.html"
+  - title: Versionshinweise
+    url: "/whats-new.html"
+  - title: Los geht's
+    entries:
+    - title: Zeigen Sie Ihre Google Cloud Storage Buckets an
+      url: "/task-viewing-gcp-storage.html"
+  - title: Management von Google Cloud Storage Buckets
+    entries:
+    - title: Neue Buckets hinzufügen
+      url: "/task-add-gcp-bucket.html"
+    - title: Ändern der Bucket-Einstellungen
+      url: "/task-change-gcp-bucket-settings.html"
+    - title: Nutzung von NetApp Datenservices mit Google Cloud Storage Buckets
+      url: "/task-gcp-enable-data-services.html"
+  - title: Wissen und Support
+    entries:
+    - title: Für den Support anmelden
+      url: "/task-support-registration.html"
+    - title: Holen Sie sich Hilfe
+      url: "/task-get-help.html"
+  - title: Rechtliche Hinweise
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Los geht's
+    links:
+    - title: Zeigen Sie Ihre Google Cloud Storage Buckets an
+      url: task-viewing-gcp-storage.html
+  - title: Management von Google Cloud Storage Buckets
+    links:
+    - title: Hinzufügen von Buckets
+      url: task-add-gcp-bucket.html
+    - title: Ändern der Bucket-Einstellungen
+      url: task-change-gcp-bucket-settings.html
+    - title: Nutzung von NetApp Datenservices mit Google Cloud Storage Buckets
+      url: task-gcp-enable-data-services.html
+  - title: Weitere Informationen
+    links:
+    - title: Google Cloud Storage-Dokumentation für das Management außerhalb von BlueXP
+      url: https://cloud.google.com/storage/docs/creating-buckets
+  - title: Blogs und Community
+    links:
+    - title: NetApp Community
+      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
+    - title: BlueXP-Blog
+      url: https://bluexp.netapp.com/blog/topic/cloud-manager
+    - title: Cloud-Webinare
+      url: https://bluexp.netapp.com/events
+product-family:
+  name: BlueXP
+  repo: bluexp-family
+  sidebar_label: Alle BlueXP-Dokumentationen

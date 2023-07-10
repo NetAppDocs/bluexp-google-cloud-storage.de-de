@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: task-gcp-enable-data-services.html 
+keywords: google buckets, google storage, google cloud storage working environment, google cloud storage buckets 
+summary: Nachdem die Google Cloud Storage Buckets in BlueXP erkannt wurden, können Sie NetApp Datenservices für Backup, Tiering und Datensynchronisierung verwenden. 
+---
+= Nutzung von NetApp Datenservices mit Google Cloud Storage Buckets
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem die Google Cloud Storage Buckets in BlueXP erkannt wurden, können Sie NetApp Datenservices für Backup, Tiering und Datensynchronisierung verwenden.
+
+* BlueXP Backup und Recovery* ermöglichen Ihnen das Backup Ihrer Daten von Ihren lokalen ONTAP und Cloud Volumes ONTAP Systemen in Google Cloud Objekt-Storage.
++
+Um zu beginnen, öffnen Sie den Bildschirm und ziehen eine lokale ONTAP- oder Cloud Volumes ONTAP-Arbeitsumgebung in Ihrer Google Cloud-Storage-Arbeitsumgebung.
+
++
+https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Erfahren Sie mehr über die Sicherung von ONTAP Daten in Google Cloud Storage"^].
+
+* Mit *BlueXP Tiering* verschieben Sie inaktive Daten von lokalen ONTAP-Clustern auf Google Cloud Objekt-Storage.
++
+Um zu beginnen, gehen Sie auf den Bildschirm und ziehen Sie eine lokale ONTAP Arbeitsumgebung in Ihrer Google Cloud-Storage-Arbeitsumgebung.
+
++
+https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-gcp.html["Weitere Informationen zum Tiering von ONTAP Daten in Google Cloud Storage"^].
+
+* Verwenden Sie *BlueXP Kopier- und Synchronisierungsfunktion* für die Datensynchronisierung mit oder von Google Cloud Storage Buckets.
++
+Um zu beginnen, gehen Sie auf den Bildschirm und ziehen Sie die Quelle Arbeitsumgebung auf die Ziel-Arbeitsumgebung. Ihre Google Cloud Storage-Arbeitsumgebung kann entweder als Quelle oder als Ziel verwendet werden.
+
++
+Sie können auch Ihre Google Cloud Storage-Arbeitsumgebung auswählen und im Servicebereich auf *Kopieren und Synchronisieren* klicken, um Daten mit oder aus Cloud Storage Buckets zu synchronisieren.
+
++
+https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["Weitere Informationen zum BlueXP Kopier- und Synchronisierungsservice"^].
+
+

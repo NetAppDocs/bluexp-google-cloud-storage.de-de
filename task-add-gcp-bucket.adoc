@@ -1,0 +1,151 @@
+---
+sidebar: sidebar 
+permalink: task-add-gcp-bucket.html 
+keywords: google cloud storage buckets, google cloud storage, add buckets 
+summary: Sobald Ihre Google Cloud Storage Arbeitsumgebung im Canvas verfügbar ist, können Sie zusätzliche Buckets direkt aus BlueXP hinzufügen. 
+---
+= Hinzufügen von Google Cloud Storage Buckets
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sobald Ihre Google Cloud Storage Arbeitsumgebung im Canvas verfügbar ist, können Sie zusätzliche Buckets direkt aus BlueXP hinzufügen.
+
+.Schritte
+. Doppelklicken Sie im Bildschirm auf die Google Cloud Storage-Arbeitsumgebung, um die Seite Google Cloud Storage Buckets Overview anzuzeigen, und klicken Sie auf *Add bucket*.
++
+image:screenshot-add-gcp-bucket-button.png["Ein Screenshot mit den Details einer Google Cloud-Storage-Arbeitsumgebung und der Schaltfläche „Bucket hinzufügen“."]
+
++
+Die Seite _Add bucket_ wird angezeigt.
+
++
+image:screenshot-add-gcp-bucket.png["Ein Screenshot mit der Seite „Bucket hinzufügen“, auf der Sie Ihren eigenen Google Cloud-Storage-Bucket erstellen können."]
+
+. Geben Sie die erforderlichen Informationen im Abschnitt _Projektdetails_ ein.
++
+[cols="25,75"]
+|===
+| Feld | Beschreibung 
+
+
+| Bucket-Name | Geben Sie den Namen ein, den Sie für den Bucket verwenden möchten. https://cloud.google.com/storage/docs/buckets#naming["Weitere Informationen zu Namensanforderungen finden Sie in der Google Cloud Dokumentation"^]. 
+
+
+| Google-Projekt  a| 
+Wählen Sie das Google-Projekt aus, das der Eigentümer des Buckets sein soll. Dies kann das primäre Projekt sein, in dem der Connector bereitgestellt wurde, oder es kann ein anderes Projekt sein.
+
+Wenn in der Dropdown-Liste keine weiteren Projekte angezeigt werden, haben Sie das BlueXP-Servicekonto noch nicht mit anderen Projekten verknüpft. Rufen Sie die Google Cloud-Konsole auf, öffnen Sie den IAM-Service und wählen Sie das Projekt aus. Fügen Sie dem Projekt das Servicekonto mit der Rolle BlueXP hinzu. Sie müssen diesen Schritt für jedes Projekt wiederholen.
+
+
+NOTE: Dies ist das Servicekonto, das Sie für BlueXP eingerichtet haben. https://docs.netapp.com/us-en/bluexp-setup-admin/task-set-up-permissions-google.html#set-up-permissions-for-the-connector["Wie auf dieser Seite beschrieben"^].
+
+
+
+| Etiketten  a| 
+Etiketten sind Metadaten für Ihre Google Cloud-Ressourcen. Beim Erstellen eines Buckets können Sie bis zu 10 Label key:value-Paare hinzufügen.
+
+https://cloud.google.com/compute/docs/labeling-resources["Weitere Informationen zu Labels finden Sie in der Google Cloud Dokumentation"^].
+
+|===
+. Wählen Sie im Abschnitt _Location_ den Standorttyp und die Region (oder Regionen) aus, in der der Bucket erstellt werden soll. Sie können aus drei verschiedenen Speicherorttypen auswählen.
++
+[cols="35,65"]
+|===
+| Wenn Sie den „Standorttyp“ auswählen... | Wählen Sie dann... 
+
+
+| Region | Eine einzelne Region aus dem Feld „Verfügbare Regionen“. 
+
+
+| Dual-Region  a| 
+Die geografische Position (ein einzelner Kontinent) aus dem Feld „Verfügbare Standorte“ und wählen Sie dann zwei Regionen im Feld „Verfügbare Regionen“ aus.
+
+Sie können „Turbo-Replikation“ aktivieren, wenn Sie für alle neu geschriebenen Objekte innerhalb von 15 Minuten eine Geo-Redundanz garantieren möchten.
+
+
+
+| Mehrere Regionen | Die geographische Multi-Region aus dem Feld „Verfügbare Multi-Regionen“. 
+|===
++
+Beachten Sie, dass alle Cloud-Storage-Daten mindestens zwei Zonen innerhalb mindestens einer geografischen Region redundant sind, sobald Sie sie hochladen. https://cloud.google.com/storage/docs/locations["Weitere Informationen zu Bucket-Speicherorten finden Sie in der Google Cloud-Dokumentation"^].
+
+. Wählen Sie im Abschnitt _Storage class_ die Storage-Klasse aus, die für Objekte in Ihrem Bucket verwendet werden soll. Sie können aus einer der vier Speicherklassen wählen, oder Sie können _Autoclass_ auswählen, um Google die Klasse nach Bedarf anpassen zu lassen.
++
+[cols="25,75"]
+|===
+| Storage-Klasse | Beschreibung 
+
+
+| Standard | Standardspeicher eignet sich am besten für Daten, auf die häufig zugegriffen wird („heiße“ Daten) und/oder nur für kurze Zeiträume gespeichert werden. 
+
+
+| Nearline | Nearline Storage ist ein kostengünstiger und langlebiger Storage-Service zur Speicherung selten genutzter Daten. 
+
+
+| Coldline | Coldline Storage ist ein sehr kostengünstiger, äußerst langlebiger Speicherdienst für die Speicherung selten genutzter Daten. 
+
+
+| Archivierung | Archive Storage ist der kostengünstigste, langlebige Storage-Service für Datenarchivierung, Online-Backup und Disaster Recovery. 
+
+
+| Autoklasse | Autoclass wechselt basierend auf dem Zugriffsmuster der einzelnen Objekte automatisch Objekte in den Bucket auf die entsprechenden Storage-Klassen. 
+|===
++
+Die Kosten und Abrufgebühren sind für jede Speicherklasse unterschiedlich. https://cloud.google.com/storage/docs/storage-classes["Weitere Informationen zu Storage-Klassen finden Sie in der Google Cloud Dokumentation"^].
+
+. Wählen Sie im Abschnitt _Protection_ aus, ob Sie Datenschutztools zum Schutz von Objekten im Bucket verwenden möchten oder ob Sie eine Datenverschlüsselungskonfiguration zum Schutz des Zugriffs auf Ihre Daten verwenden möchten.
++
+[cols="25,75"]
+|===
+| Datensicherung | Beschreibung 
+
+
+| Keine | Standardmäßig sind auf dem Bucket keine Schutztools aktiviert. 
+
+
+| Objektversionierung  a| 
+Der Bucket behält jedes Mal, wenn Sie eine Live-Objektversion aktualisieren, ersetzen oder löschen, eine nicht aktuelle Objektversion bei – damit wird eine geschützte Version des Objekts fortlaufend beibehalten. Wenn Sie „Objektversionierung“ auswählen, können Sie zwei Optionen angeben:
+
+** *Max. Anzahl der Versionen pro Objekt* - Geben Sie die Anzahl der nicht aktuellen Versionen pro Objekt ein, das erstellt werden soll.
+** *Nicht aktuelle Versionen ablaufen lassen nach* - Geben Sie die Anzahl der Tage ein, nach denen die älteren, nicht aktuellen Objekte entfernt werden.
+
+
+
+
+| Aufbewahrungsrichtlinie  a| 
+Eine Aufbewahrungsrichtlinie sorgt dafür, dass alle aktuellen und zukünftigen Objekte in dem Bucket nicht gelöscht oder ersetzt werden können, bevor sie das in der Aufbewahrungsrichtlinie festgelegte Alter erreichen. Wenn Sie „Aufbewahrungsrichtlinie“ auswählen, können Sie zwei Optionen angeben:
+
+** *Objekte behalten für* - Geben Sie die Anzahl der Sekunden, Tage, Monate oder Jahre ein, die Objekte beibehalten werden.
+** *Zeitrahmen* - Wählen Sie, ob die Zeit in Sekunden, Tagen, Monaten oder Jahren ist.
+
+
+|===
++
+Die Tools für Objektversionierung und Aufbewahrungsrichtlinien können nicht gleichzeitig aktiviert werden. In der Google Cloud-Dokumentation für finden Sie https://cloud.google.com/storage/docs/object-versioning["Weitere Informationen zur Objektversionierung"^], und https://cloud.google.com/storage/docs/bucket-lock["Weitere Informationen zu Aufbewahrungsrichtlinien"^].
+
++
+[cols="25,75"]
+|===
+| Datenverschlüsselung | Beschreibung 
+
+
+| Von Google gemanagte Verschlüsselung | Standardmäßig werden von Google gemanagte Verschlüsselungen zur Verschlüsselung Ihrer Daten verwendet. 
+
+
+| Vom Kunden gemanagte Verschlüsselung (CMEK)  a| 
+Sie können Ihre eigenen, von Kunden gemanagten Schlüssel zur Datenverschlüsselung verwenden, statt die von Google standardmäßig gemanagten Verschlüsselungsschlüssel zu verwenden. Wenn Sie planen, Ihre eigenen vom Kunden verwalteten Schlüssel zu verwenden, müssen Sie sie bereits erstellt haben, damit Sie die Schlüssel auf dieser Seite auswählen können.
+
+Die Schlüssel können sich im selben Projekt befinden wie der Bucket, oder Sie können ein anderes Projekt auswählen.
+
+|===
++
+In der Google Cloud-Dokumentation für finden Sie https://cloud.google.com/storage/docs/encryption/default-keys["Weitere Informationen über von Google verwaltete Verschlüsselungen"^], und https://cloud.google.com/storage/docs/encryption/customer-managed-keys["Weitere Informationen zu vom Kunden verwalteten Verschlüsselungsschlüsseln"^].
+
+. Klicken Sie auf *Hinzufügen* und der Bucket wird erstellt.
+
