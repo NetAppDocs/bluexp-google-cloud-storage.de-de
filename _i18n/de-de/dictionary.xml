@@ -280,7 +280,6 @@
   <block id="145634d473d937448dc7bdb5a6797ea7" category="section-title">10 Juli 2023</block>
   <block id="5a6d96b9a020e520981bf7fe4c7af203" category="section-title">Das Hinzufügen neuer Buckets und das Management vorhandener Buckets aus BlueXP ist möglich</block>
   <block id="2706c3785e1f78099c28d555600c918b" category="inline-link">So fügen Sie neue Google Cloud Storage Buckets hinzu</block>
-  <block id="71d86d6b260e92b047d7453cd653bd4c" category="paragraph">Sie haben nun schon lange die Möglichkeit, Google Cloud Storage Buckets auf dem BlueXP Canvas anzuzeigen. Sie können jetzt neue Buckets hinzufügen und Eigenschaften für vorhandene Buckets direkt aus BlueXP ändern.<block ref="df1f25cc6ac4c2f26feeca1367b4ae92" category="inline-link-rx"></block>.</block>
   <block id="b83e711561263aa7a3404d6bb2624f6e" category="sidebar">Google Cloud Storage-Dokumentation</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Versionshinweise</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
@@ -334,4 +333,5 @@
   <block id="0ca08a23718c0a91743dd6c0146ca353" category="paragraph">Um die folgenden wichtigen Workflows für Cloud Volumes ONTAP zu ermöglichen, müssen die Zugangsdaten auf der NetApp Support Website Ihrer BlueXP  Abteilung zugeordnet werden:</block>
   <block id="c81c8e01f5d906ae1ab0c5c606f06b05" category="paragraph">Das Zuordnen von NSS-Anmeldeinformationen zu Ihrer BlueXP -Organisation unterscheidet sich von dem NSS-Konto, das mit einer BlueXP -Benutzeranmeldung verknüpft ist.</block>
   <block id="8166996cb4a59c147200d89a061bb49c" category="paragraph">Diese NSS-Anmeldedaten sind mit Ihrer spezifischen BlueXP -Organisations-ID verknüpft. Benutzer, die zur BlueXP -Organisation gehören, können über *Support &gt; NSS-Verwaltung* auf diese Anmeldeinformationen zugreifen.</block>
+  <block id="4d1dd60706cede8204b5a6edb14f8ff5" category="paragraph">Sie haben nun schon lange die Möglichkeit, Google Cloud Storage Buckets auf dem BlueXP Canvas anzuzeigen. Jetzt können Sie neue Buckets hinzufügen und Eigenschaften für vorhandene Buckets direkt aus BlueXP  ändern.<block ref="a727375f2b80e544cee46379a3fbce4b" category="inline-link-rx"></block>.</block>
 </blocks>
