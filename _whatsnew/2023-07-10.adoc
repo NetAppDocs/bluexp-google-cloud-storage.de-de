@@ -1,5 +1,7 @@
 = Das Hinzufügen neuer Buckets und das Management vorhandener Buckets aus BlueXP ist möglich
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 
